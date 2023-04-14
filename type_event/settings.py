@@ -2,6 +2,7 @@
 
 import os
 from pathlib import Path
+from django.contrib.messages import constants
 
 
 
@@ -121,3 +122,12 @@ MEDIA_URL = 'media/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Configurações de mensagens
+
+MESSAGE_TAGS = {
+    constants.DEBUG: 'alert-primary',
+    constants.ERROR: 'alert-danger',
+    constants.WARNING: 'alert-warning',
+    constants.SUCCESS: 'alert-success',
+    constants.INFO: 'alert-info ',
+}
